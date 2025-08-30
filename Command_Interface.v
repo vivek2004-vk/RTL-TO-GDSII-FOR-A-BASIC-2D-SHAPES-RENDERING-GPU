@@ -24,7 +24,7 @@
 //   - x0, y0, x1, y1, x2, y2: 8-bit coordinates for shape vertices
 //   - fill_enable: Enables filled shapes when high
 //   - color: 24-bit RGB color for shape
-//   - bg_color: 24-bit RGB background color (used for clear commands)
+
 
 module command_interface (
     input  wire        clk,          // Clock input
