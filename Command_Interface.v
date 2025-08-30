@@ -1,30 +1,4 @@
-// Module: command_interface
-// Description: Parses a 128-bit command input to extract shape drawing parameters
-//              (shape type, coordinates, color, etc.) and generates a start signal.
-//              Operates synchronously with clock and includes reset functionality.
-// Inputs:
-//   - clk: Clock signal for synchronous operation
-//   - rst: Active-high asynchronous reset
-//   - cmd_valid: When high, indicates cmd_data is valid and should be parsed
-//   - cmd_data: 128-bit command input with fields:
-//               [127:124] - shape_type (4 bits)
-//               [123:116] - x0 (8 bits)
-//               [115:108] - y0 (8 bits)
-//               [107:100] - x1 (8 bits)
-//               [99:92]   - y1 (8 bits)
-//               [91:84]   - x2 (8 bits)
-//               [83:76]   - y2 (8 bits)
-//               [75]      - fill_enable (1 bit)
-//               [74:51]   - color (24 bits, RGB)
-//               [50:27]   - bg_color (24 bits, RGB)
-//               [26:0]    - unused (padding)
-// Outputs:
-//   - start: High for one cycle when a valid command is parsed
-//   - shape_type: 4-bit shape identifier (e.g., 1=line, 2=rect)
-//   - x0, y0, x1, y1, x2, y2: 8-bit coordinates for shape vertices
-//   - fill_enable: Enables filled shapes when high
-//   - color: 24-bit RGB color for shape
-//   - bg_color: 24-bit RGB background color (used for clear commands)
+
 
 module command_interface (
     input  wire        clk,          // Clock input
